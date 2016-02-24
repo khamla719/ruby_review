@@ -64,7 +64,7 @@ worked.  Paste the verifying queries and their results into
 ### Release 4: `UPDATE`
 
 In your terminal, create and execute the following queries:
-- update the author named "David Black" to "David A. Black"
+- update the author named "David A. Black" to "David Black"
 
 Execute queries to perform the `UPDATE` and paste them into
 `part-4/queries.md`. Also execute queries that verify your `UPDATE` statements
