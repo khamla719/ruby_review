@@ -1,4 +1,9 @@
+require_relative "equipment_status"
+
 class Campsite
+  include EquipmentStatus
+  undef_method :record_damage, :repair
+
   attr_reader :location, :square_footage
   attr_accessor :assigned_employee
 
@@ -15,22 +20,6 @@ class Campsite
 
   def water?
     @water
-  end
-
-  def reserve
-    @reserved = true
-  end
-
-  def end_reservation
-    @reserved = false
-  end
-
-  def reserved?
-    @reserved
-  end
-
-  def available?
-    !reserved?
   end
 
   def assigned?
