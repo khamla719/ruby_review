@@ -193,5 +193,29 @@ id          title                       author_id   publisher_id
 20          Introduction to Algorithms  15          7
 21          Getting the Job             16          8
 
+update the author named "David A. Black" to "David Black"
+UPDATE authors
+SET name='David Black'
+WHERE name LIKE 'David A. Black';
+
+SELECT * FROM authors;
+id          name
+----------  -----------
+1           Noel Rappin
+2           Paolo Perro
+3           Dave Thomas
+4           Sandi Metz
+5           Obie Fernan
+6           Aaron Hille
+7           Douglas Cro
+8           David Flana
+9           Michael Fog
+10          Jonathan Pe
+11          Russ Olsen
+12          Jon Duckett
+13          David Black
+14          Rod Stephen
+15          Thomas Corm
+16          Khamla Phim
 
 
