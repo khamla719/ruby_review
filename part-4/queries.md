@@ -58,6 +58,28 @@ id          name
 14          Rod Stephen
 15          Thomas Corm
 
+show all the books containing "Ruby" in the title
+SELECT * FROM books
+WHERE title LIKE '%Ruby%';
+id          title                   author_id   publisher_id
+----------  ----------------------  ----------  ------------
+2           Metaprogramming Ruby 2  2           1
+3           Programming Ruby 1.9 &  3           1
+5           Practical Object Orien  4           2
+14          Design Patterns in Rub  11          2
+15          Eloquent Ruby           11          2
+18          Well-Grounded Rubyist   13          6
+
+show the authors with a name starting with "Dav"
+SELECT * FROM authors
+WHERE name LIKE 'Dav%';
+id          name
+----------  -----------
+3           Dave Thomas
+8           David Flana
+13          David A. Bl
+
+
 
 
 
