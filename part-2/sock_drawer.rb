@@ -14,4 +14,12 @@ class SockDrawer
     matched_sock = @socks.find {|s| @matcher.match?(s, possible_match)}
     @socks.delete(matched_sock)
   end
+
+  def supply_random_pair_of_socks
+    @socks.each do |sock|
+      match = supply_match_for(sock)
+      return [match, @socks.delete(sock)] if match != nil
+    end
+    return []
+  end
 end
