@@ -1,6 +1,9 @@
+require_relative "document_status"
+
 class Invoice
+  include DocumentStatus
+
   attr_reader :amount, :due_date, :invoicee
-  attr_accessor :assigned_employee
 
   def initialize(args = {})
     @amount = args.fetch(:amount)
@@ -8,7 +11,4 @@ class Invoice
     @invoicee = args.fetch(:invoicee)
   end
 
-  def assigned?
-    !!@assigned_employee
-  end
 end
